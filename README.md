@@ -332,7 +332,30 @@ console.log(b.length); // error because we cannot access any property or method 
 
 ## Node js
 
-#### 1.1.What is the difference between blocking I/O and Non-blocking I/O? and why is it significant?
+#### 1.What is the difference between blocking I/O and Non-blocking I/O? and why is it significant?
 
 - blocking I/O means programme wait for executaion for current task after complete this task then execution next task.but non blocking I/O is able to execute all task immediately without waiting for any task to cpmplete and retrun result via callback or promise.
 - we know that node js is single threded. node js have to handle multiple task at a time . if node js use blocking I/O then it will very slow in production. but node js magically use non blocking I/O. as a result noode js is very fast and efficiently handle multiple task by one thread.
+
+#### 2. 3.4.What is the Event loop in Node.js and what are its key features/How Node.js handles multiple tasks even after being single-threaded??
+
+- event loop is a mechanism that handle asynchronous task in node js. we know node js is a single thread programming language, it means node js can execute one task at a time. but in real world application we need to handle multiple task at at time.
+- event loop key features:
+  - it is a infinite loop that continously cheak the call stack and call back queue.
+  - it is non blocking and it is able handle multiple task at a time.
+  - it handle asynchonous task efficintly by using callback and promise.
+  - it is a part of v8 engine and it is implemented in c++.
+
+#### 5.What is the difference between npm and yarn? where and when they should be used?
+
+- npm(node package manager) and yarn(yet another resource negotiator) both are package manager for node js.they are used for managing dependecies and package in node js project.
+- npm is the default package manager for node js and it is come with node js installation.
+- yarn is an alternative package manager for node js and it is developed by facebook.
+- npm use:
+- for small project
+- simple workflow
+- industry standard flow
+- yarn use:
+  - for large project
+  - complex workflow
+  - better performance
