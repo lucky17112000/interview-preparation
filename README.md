@@ -282,3 +282,50 @@ const myType =  "strong" as string;
 - string : string is sequmce of characters and it is used to reresend of text.
 - number : number is used to represent of numeric value and it can be integer or floating point number.
 - boolean : boolean is used to represent of logical value and it can be true or false.
+
+#### 7.What are getters/setters?
+
+- getters and setters are used to access and modify the private members of a class.getter is used to get the value of private memeber and setter is used to set the value of private memeber.
+
+```
+class Person {
+  private _name!: string;
+  private _age!: number;
+  set name(value: string) {
+    this._name = value;
+  }
+  set age(value: number) {
+    this._age = value;
+  }
+  get name(): string {
+    return this._name;
+  }
+  get age(): number {
+    return this._age;
+  }
+}
+
+const Person1 = new Person();
+Person1.name = "Alamin";
+Person1.age = 25;
+console.log(Person1.name);
+console.log(Person1.age);
+
+```
+
+#### 8.Describe the difference between any and unknown types in Typescript. When would you use each?
+
+- any and unknown both are used for when we are not sure aboout the type of variable.but there are some diffrent between them.
+- any; when we use asy type for any variable then typescript allow us to assing any type of value to this variable but it ois not safe because it can lead to runtime error.
+- unknown: when we use unknown type for any variable then typescript allow us to assing any type of value to this variable but it is safe because it does not allow us to access any property or method of this variable without type assertion.
+
+```
+let a: any = 10;
+a = "hello";
+a = true; // no error
+let b: unknown = 10;
+b = "hello";
+b = true; // no error
+console.log(a.length); // no error but it will be undefined
+console.log(b.length); // error because we cannot access any property or method of unknown type without
+```

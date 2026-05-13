@@ -93,3 +93,27 @@ function greetUser(user: User) {
 greetUser({ name: "Alice", age: 30, email: "hello@gmail.com" });
 
 const myType = "strong" as string;
+console.log("tehal");
+
+class Person {
+  private _name!: string;
+  private _age!: number;
+  set name(value: string) {
+    this._name = value;
+  }
+  set age(value: number) {
+    this._age = value;
+  }
+  get name(): string {
+    return this._name;
+  }
+  get age(): number {
+    return this._age;
+  }
+}
+
+const Person1 = new Person();
+Person1.name = "Alamin";
+Person1.age = 25;
+console.log(Person1.name);
+console.log(Person1.age);
