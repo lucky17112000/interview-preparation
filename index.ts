@@ -11,29 +11,67 @@
 
 //!SECTION2 What is Scope in javascript?
 
-const name2: string = "ALamin"; //globally
-function printName() {
-  console.log(name2);
-}
+// const name2: string = "ALamin"; //globally
+// function printName() {
+//   console.log(name2);
+// }
 // printName();
 // if (true) {
 //   console.log(name2);
 // }
 
 //ANCHOR - local scope
-function localScope() {
-  const name2 = "Emon";
-  console.log(name2);
-}
+// function localScope() {
+//   const name2 = "Emon";
+//   console.log(name2);
+// }
 
-localScope();
+// localScope();
 
 //ANCHOR - lblock scope
-for (let i = 0; i < 5; ++i) {
-  const name2 = "Emon";
-  console.log(name2);
-}
-if (6 % 2 === 0) {
-  const name2 = "Emon";
-  console.log(name2);
-}
+// for (let i = 0; i < 5; ++i) {
+//   const name2 = "Emon";
+//   console.log(name2);
+// }
+// if (6 % 2 === 0) {
+//   const name2 = "Emon";
+//   console.log(name2);
+// }
+
+//!SECTION4 call , apply and bind
+//this keyword:thisnkeyword helps us to use any function reuse in diffrent context
+//role1:implicit binding
+//role2:explicit binding
+//role3:new binding
+//role4:window binding
+
+//!SECTION implicit binding
+// const sakib = {
+//   name: "Sakib Al Hasan",
+//   age: 36,
+//   printName: function () {
+//     console.log(this.name);
+//   },
+// };
+
+// sakib.printName();
+
+//!SECTION explicit binding
+const printName = function (v1, v2, v3) {
+  console.log(this.name);
+};
+
+const tamim = {
+  name: "Tamim Iqbal",
+  age: 37,
+};
+
+// printName.call(tamim);
+
+const v1 = "Bangladesh";
+const v2 = "India";
+const v3 = "Pakistan";
+const v = [v1, v2, v3];
+// printName.apply(tamim, v);
+const newFunc = printName.bind(tamim);
+newFunc(v1, v2, v3);

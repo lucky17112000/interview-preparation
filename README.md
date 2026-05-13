@@ -73,3 +73,37 @@ if (6 % 2 === 0) {
   console.log(name2);
 }
 ```
+
+#### What is the difference between Call, Apply, and Bind?
+
+- when we need explicit binding, we can use call , apply , and binding method. these three method are used to set the value of this keyword inside a function.
+- call method: call method is used to call a function with a given this value and arguments provided individually.
+- apply method: apply method is used to call a function with a given this value and arguments provided as an array.
+- bind method: it as like call method but it dosenot called the function immidiatly instead it return a new function with the this value and arguments provided.
+
+```
+//role2:explicit binding
+
+
+
+
+//!SECTION explicit binding
+const printName = function (v1, v2, v3) {
+  console.log(this.name);
+};
+
+const tamim = {
+  name: "Tamim Iqbal",
+  age: 37,
+};
+
+ printName.call(tamim);
+
+const v1 = "Bangladesh";
+const v2 = "India";
+const v3 = "Pakistan";
+const v = [v1, v2, v3];
+ printName.apply(tamim, v);
+const newFunc = printName.bind(tamim);
+newFunc(v1, v2, v3);
+```
