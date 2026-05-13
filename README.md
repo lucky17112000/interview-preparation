@@ -160,7 +160,7 @@ console.log(b + 1); // 1 ⚠️ (null = 0 হিসেবে কাজ করে
 
   ```
 
-#### what is promise in javascript?
+#### 6.what is promise in javascript?
 
 - A Promise is like a guarantee that something will happen in the future — either success or failure.
 - promise is an object that handle javascript asynchronouse operation
@@ -191,3 +191,10 @@ async function getUser() {
     }
 }
 ```
+
+#### 7.What is an event loop? How does javaScript handle asynchronous tasks?
+
+- event loop is a mecahanism that handle asynchronous task in javascript. we know javasript is a single thread programming language, it means javascript can execute one task at a time. but in rea;l world application we need to handle multiple task at at time.
+- so how to chandle multiple task at a time..?
+- in v8 engine have a call stack. it is able to hanlde synchronous task one by one. when call stack get any asynchronopus task then it send this to web api then handle it web api. after that it send callback function to this call abck queue.now event loop craft a bridge between call stack and call back queue.event loop cheak call stack is empty or not if it is empty then it send this callback function to call stack and execute this synchronously.this is how javascript handle asynchronous task.
+  ![alt text](https___dev-to-uploads.s3.amazonaws.com_uploads_articles_lqhhnr6n1w1l13g75ki0-1.webp)
