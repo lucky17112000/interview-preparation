@@ -198,3 +198,20 @@ async function getUser() {
 - so how to chandle multiple task at a time..?
 - in v8 engine have a call stack. it is able to hanlde synchronous task one by one. when call stack get any asynchronopus task then it send this to web api then handle it web api. after that it send callback function to this call abck queue.now event loop craft a bridge between call stack and call back queue.event loop cheak call stack is empty or not if it is empty then it send this callback function to call stack and execute this synchronously.this is how javascript handle asynchronous task.
   ![alt text](https___dev-to-uploads.s3.amazonaws.com_uploads_articles_lqhhnr6n1w1l13g75ki0-1.webp)
+
+#### 8.How can you eliminate duplicate values from a JavaScript array?
+
+- there are several ways to elimante duplicate values from a JavaScript array. some of them are:
+- filter + indexOf - this method is used to filter the array and return only unique values.
+- for loop + indexOf - this method is used to loop through the array and return only unique values.
+- filter + findIndex - this method is used to filter the array and return only unique values.
+
+##### all complexity O(n^2) which is not good for large array
+
+- best approch by SET - its complexity is O(n) and it is very easy to implement.
+
+```
+const numbers = [1, 2, 3, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10];
+const unique = [...new Set(numbers)];
+console.log(unique);
+```
