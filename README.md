@@ -74,7 +74,7 @@ if (6 % 2 === 0) {
 }
 ```
 
-#### What is the difference between Call, Apply, and Bind?
+#### 3 What is the difference between Call, Apply, and Bind?
 
 - when we need explicit binding, we can use call , apply , and binding method. these three method are used to set the value of this keyword inside a function.
 - call method: call method is used to call a function with a given this value and arguments provided individually.
@@ -106,4 +106,25 @@ const v = [v1, v2, v3];
  printName.apply(tamim, v);
 const newFunc = printName.bind(tamim);
 newFunc(v1, v2, v3);
+```
+
+#### 4.What is the difference between undefined and null ?
+
+- undefined: undefined is a primitive value that is automatically assinged to variable when it is decleraed but not intialized. it is also represent absence of value. this type is undefined.
+- null: null also a primitive value that represent absence value but intensionally developer assign null in any variable.
+
+```
+let a = undefined;
+let b = null;
+
+console.log(a == b);   // true
+console.log(a === b);  // false
+
+console.log(typeof a); // "undefined"
+console.log(typeof b); // "object"  this is a js bug
+
+// Math এ ব্যবহার
+console.log(a + 1); // NaN
+console.log(b + 1); // 1 ⚠️ (null = 0 হিসেবে কাজ করে)
+
 ```
