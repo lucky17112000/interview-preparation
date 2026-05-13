@@ -329,3 +329,10 @@ b = true; // no error
 console.log(a.length); // no error but it will be undefined
 console.log(b.length); // error because we cannot access any property or method of unknown type without
 ```
+
+## Node js
+
+#### 1.1.What is the difference between blocking I/O and Non-blocking I/O? and why is it significant?
+
+- blocking I/O means programme wait for executaion for current task after complete this task then execution next task.but non blocking I/O is able to execute all task immediately without waiting for any task to cpmplete and retrun result via callback or promise.
+- we know that node js is single threded. node js have to handle multiple task at a time . if node js use blocking I/O then it will very slow in production. but node js magically use non blocking I/O. as a result noode js is very fast and efficiently handle multiple task by one thread.
