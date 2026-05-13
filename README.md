@@ -215,3 +215,25 @@ const numbers = [1, 2, 3, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10];
 const unique = [...new Set(numbers)];
 console.log(unique);
 ```
+
+## Typescript
+
+#### 1.What is an Interface in typescript?
+
+- interface is a bluprint or contarct of an object
+- it help us to define the structure of an object.it is also used to define the type of function and class
+- interface is a compile time feature and it is not exist in runtime
+
+```
+interface User {
+  name: string;
+  age: number;
+  email: string;
+}
+function greetUser(user: User) {
+  console.log(
+    `Hello, ${user.name}! Your email is ${user.email} and you are ${user.age} years old.`,
+  );
+}
+greetUser({ name: "Alice", age: 30, email: "hello@gmail.com" });
+```
