@@ -128,3 +128,34 @@ console.log(a + 1); // NaN
 console.log(b + 1); // 1 ⚠️ (null = 0 হিসেবে কাজ করে)
 
 ```
+
+#### 5.What is Cookie?
+
+- cookie is a small piece of data that is stored on the browser by web server.it is use to store user information and prefecrnces.it helps us to communicate between client and server.every time we are required to send cookie to the server when we want to send request to the srver.
+- how to work cookie:
+  - website login
+  - server craft cookie and send to the browser
+  - borwser store this cookie
+  - after thet when we send request to the server then browser send this cookie to the server
+  - server recognize me by this cookie and send response to the browser
+- cookies properties:
+  - expires: how long the cookie will be stored in the browser
+  - path: the path of the cookie
+  - secure: only https
+  - httpOnly: javaScript cannot access this cookie
+  - sameSite: only send cookie to the same site
+- there are three types of cookie: session cookie, persistent cookie and third party cookie.
+- drawback of cookie:
+  - size is too small (4KB)
+  - XSS attack
+  - privacy issue
+
+  ```
+  create cookie
+  document.cookie = "username=ALamin; expires=Fri, 31 Dec 2024 23:59:59 GMT; path=/";
+  read cookie
+  console.log(document.cookie);
+  delete cookie
+  document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
+
+  ```
