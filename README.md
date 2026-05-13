@@ -359,3 +359,23 @@ console.log(b.length); // error because we cannot access any property or method 
   - for large project
   - complex workflow
   - better performance
+
+#### 6.What are node.js streams? How does it work?
+
+- usually for big data we use sream because it divide data chunk by chunk and process this data chunk by chunk. as a result it is very fast and efficient for handling big data. after process one chunk of data then process next chunk of data. it is also used for handling real time data and it is also used for handling file system.
+- there are four types of stream in node js: readable stream, writable stream, duplex stream and transform stream.
+
+#### 7. What is middleware in node.js?
+
+- middlware is a function it work as a bridge between request and response.it is use handle request and response in node js application , it is also used for handling authentication, authorization, logging, error handling and many more. it can block request and modify request and response .
+- there are two types of middleware in node js: application level middleware and router level middleware.
+- application level middleware is used to handle request and response for all routes and router level middleware is used to handle request and response for specific route.
+
+#### 8.What is Node.js EventEmitter?
+
+- even emitter ia core module of node js and it is used handle event in node js application.
+- it work like-> emit the event that means send the signal and event listen that means wait and react.
+- important method of event emitter:
+- on: it is used for listen the event
+- emit: it is trigger the event
+- once: it is execute for one time and then it will be remove from event listener
