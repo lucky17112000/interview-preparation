@@ -379,3 +379,17 @@ console.log(b.length); // error because we cannot access any property or method 
 - on: it is used for listen the event
 - emit: it is trigger the event
 - once: it is execute for one time and then it will be remove from event listener
+
+## Express js
+
+#### 1.How to do Cross-Origin Resource Sharing in express.js?
+
+- cross origin resource sharing is a machanism that allow us to access resource from diffrent origin. by default web browser not allow to acess resource from diffrent origin but we can use cors midlawre to acess resource from diffrent origin.
+
+```
+app.use(
+  cors({
+    origin: "http://localhost:3000",
+  })
+)
+```
