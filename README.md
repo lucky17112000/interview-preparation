@@ -269,8 +269,16 @@ const myType =  "strong" as string;
 
 - access modifiers are used to control the access of class mambers. there are three access modifiers in typescript: public, private and protected.
 
-### 5.What is the difference between public, private, and protected access modifiers?
+#### 5.What is the difference between public, private, and protected access modifiers?
 
 - public : public access modifier is used to make the class mamber accesible from anywhere. by default all class members are public.
 - private: when we use private modifier into any class member then it only accessible for this class and it is not accessible for any other class.
 - protected: when we use protected modifier into any class member it can be accesible for its own class and which class is extende or inherit this class but it is not accessible for any other class.
+
+#### 6.What are the three main primitive data types in TypeScript?
+
+- primitive data type is most basic data type in typescipt. it only one value at a time and it is immutable.
+- there are three main primitive data type in typescript: string, number and boolean. also null and undefined primitive data type
+- string : string is sequmce of characters and it is used to reresend of text.
+- number : number is used to represent of numeric value and it can be integer or floating point number.
+- boolean : boolean is used to represent of logical value and it can be true or false.
