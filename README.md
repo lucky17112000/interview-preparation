@@ -159,3 +159,35 @@ console.log(b + 1); // 1 ⚠️ (null = 0 হিসেবে কাজ করে
   document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
 
   ```
+
+#### what is promise in javascript?
+
+- A Promise is like a guarantee that something will happen in the future — either success or failure.
+- promise is an object that handle javascript asynchronouse operation
+- it has 3 state: pending , fullfilled and rejected
+- when the operation is success then resolve is called and .then() handle the result
+- when the operation is filed then reject iscalled and .catch() handle the error
+- promise was introduce for resolve the callback hell porblem and make asynchronous code clean and more readable.
+
+```
+// Same job — different style
+
+//
+function getUser() {
+    fetch("api/user")
+        .then(res => res.json())
+        .then(data => console.log(data))
+        .catch(err => console.log(err));
+}
+
+//  Async/Await way
+async function getUser() {
+    try {
+        const res = await fetch("api/user");
+        const data = await res.json();
+        console.log(data);
+    } catch(err) {
+        console.log(err);
+    }
+}
+```
