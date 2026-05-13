@@ -91,3 +91,5 @@ function greetUser(user: User) {
   );
 }
 greetUser({ name: "Alice", age: 30, email: "hello@gmail.com" });
+
+const myType = "strong" as string;

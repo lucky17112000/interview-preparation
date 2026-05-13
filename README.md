@@ -237,3 +237,40 @@ function greetUser(user: User) {
 }
 greetUser({ name: "Alice", age: 30, email: "hello@gmail.com" });
 ```
+
+#### 2.What is the difference between Type and Interface in typescript?
+
+- type and interface are both used to define the structure of an object but there are some difference between them.
+- intreface not supoport primitive type but type support primitive type
+- interface not support union type but type support union type
+- interface not support tuple type but type support tuple type
+- in intrface we can extends by extends keyword but in type we can extends by intersection.
+- in interface we cam merge two interface but in type we cannot merge two type.
+- we can implemant class by both intreface and type.
+  | Feature | Interface | Type |
+  |---|---|---|
+  | Primitive Type | ❌ Not Supported | ✅ Supported |
+  | Union Type | ❌ Not Supported | ✅ Supported |
+  | Tuple Type | ❌ Not Supported | ✅ Supported |
+  | Extend | ✅ `extends` keyword | ✅ `&` Intersection |
+  | Declaration Merging | ✅ Can merge two Interfaces | ❌ Cannot merge two Types |
+  | Class Implementation | ✅ Supported | ✅ Supported |
+
+#### 3. What is a type assertion in typescript?
+
+- type assertion is a way to tell the compiler about the type of variable.it is also called type casting.
+- type assertion is used when user sure about the type of variable but compiler is not sure about it.
+
+```
+const myType =  "strong" as string;
+```
+
+#### 4.How many access modifiers are there in typeScript?
+
+- access modifiers are used to control the access of class mambers. there are three access modifiers in typescript: public, private and protected.
+
+### 5.What is the difference between public, private, and protected access modifiers?
+
+- public : public access modifier is used to make the class mamber accesible from anywhere. by default all class members are public.
+- private: when we use private modifier into any class member then it only accessible for this class and it is not accessible for any other class.
+- protected: when we use protected modifier into any class member it can be accesible for its own class and which class is extende or inherit this class but it is not accessible for any other class.
