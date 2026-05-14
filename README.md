@@ -422,3 +422,23 @@ app.use(
 - middlawre execution: middlware execute one by one in the order they are defined in the application by next() function.
 - actual route handler: after ececute all middlware then it execute actual routehandler.
 - response send: after execution all middlware and actual route handler successfully then send response to the client.
+
+#### 6. How to create and use custom middleware in Express?
+
+- we are able to create cutom middlare by eq , res , next parameter. after create cutom midlware we can use it in our aplication by app.use() method.
+- we can pass it apply iy globally by app.use() to all route opas it directly to any sepecific route.
+
+```
+function logger(req: Request, res: Response, next: NextFunction) {
+  console.log(`${req.method} ${req.url}`);
+  next();
+}
+app.use(logger);
+```
+
+### 7.How is JSON and URL encoded body parsing done in Express?
+
+- when client send data to server then it comes as a raw format/string. express cannot it understand this raw data.then body parser middlawre parse this and convert to redable/json format. after that it take into req.body;
+- wehn comes url encoded data that means form data from client it also not redable for express.then as usual body parser middlawre parse this data and convert to redable format and take into req.body;
+- for jsoon -> app.use(express.json());
+- for url encoded -> app.use(express.urlencoded({ extended: true }));
