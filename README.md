@@ -436,9 +436,19 @@ function logger(req: Request, res: Response, next: NextFunction) {
 app.use(logger);
 ```
 
-### 7.How is JSON and URL encoded body parsing done in Express?
+#### 7.How is JSON and URL encoded body parsing done in Express?
 
 - when client send data to server then it comes as a raw format/string. express cannot it understand this raw data.then body parser middlawre parse this and convert to redable/json format. after that it take into req.body;
 - wehn comes url encoded data that means form data from client it also not redable for express.then as usual body parser middlawre parse this data and convert to redable format and take into req.body;
 - for jsoon -> app.use(express.json());
 - for url encoded -> app.use(express.urlencoded({ extended: true }));
+
+#### 8.What kind of tasks are required to configure a project in Express?
+
+- to configure a project in express we need to do some task like:
+- create a new directory for the project and navigate to it in the terminal.
+- initialize a new npm project by running npm init -y in the terminal.
+- install express by running npm install express in the terminal.
+- create a new file for the server, for example, index.js and import express in this file.
+- create an instance of express and define routes for the application.
+- start the server by running node index.js in the terminal.
