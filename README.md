@@ -452,3 +452,48 @@ app.use(logger);
 - create a new file for the server, for example, index.js and import express in this file.
 - create an instance of express and define routes for the application.
 - start the server by running node index.js in the terminal.
+
+## Next js
+
+#### 1.How does Next.js differ from a traditional React application?
+
+- the traditional react uses only clint side rebdering. the browser recive the empty html and javascript filled the content, which is bad for SEO and performance.but nezxt js built top of react that support multiple rendering method ->ssg , ssr , isr, , csr.it has built in file base route , api route , image optimiaztaion and better seo because server send fully rendered html to the browser.we are able to build by next js production ready application with better performance and seo.
+
+### 2.Explain the difference between SSR and SSG.
+
+- SSR generate HTML on every request and send to the browse.in that case we get fresh data on every request but server load is higer but response time is slower. when we neeed frequently fresh data every request then we can use ssr
+- SSG generate HTML at build time only once and sent to the browser. we may not get fresh data in every resquest. but as HTML file build only once as a result it is super fast and provide better performance.when we need static data that dosenot change frequently in that case we camn use ssg
+
+#### 3.What are the advantages of using Next.js for server-side rendering?
+
+- next js generate fully rendered htmlsend to the browser as a result it better foor seo and perfomance.security is also better because api key stay on server.ssr can handle dynaic data and it is also good for user experince.
+
+#### 4.What is the purpose of the next.config.js file?
+
+- next.config file used for configure next js applicxation. it stay on root directory of next js application.we can use it image opimization, env variable , webpack configuration , redirect and rewrites.it is herat of next js application because we can customize our next js application by this file.
+
+#### 5. How can you handle client-side navigation in Next.js?
+
+- navigation means cahnging page without reloaidng next js full appliation.next js provide a built in component for next js navigation that is called Link componant.
+- also we cn use useRouter hook for programmatic navigation in that case we use router.push() method.
+- some other method for navigation is router.replace() and router.back() , router.forward().
+
+#### 6.What are some common performance optimization techniques in Next.js?
+
+- next js provide several performance optimization technique like:
+- image optimization: next js provide built in image component that automatically optimize images for better performance.
+- code splitting: next js automatically split code into smaller chunk for better performance.
+- static generation: next js support static generation that generate html at build time for better performance.
+- server side rendering: next js support server side rendering that generate html on every request for better performance.
+- lazy loading: next js support lazy loading that load component only when it is needed for better
+  performance.
+- caching: next js support caching that cache data for better performance.
+- prefetching: next js support prefetching that prefetch data for better performance.
+
+#### 7. What is prefetching in Next.js?
+
+- prefetching is a technique that automatically load data before its needed. when we use Link componant next js automaticly prefceth the datafor next page as result user get better user experimce and faster navihation. prefetching is enable by default in next js but we can disable it by using prefetch={false} in Link componant.
+
+#### 8. Explain how middleware works in Next.js.
+
+- middleware is a function that run before the request is processed by the server. it is used for handling authentication, authorization, logging, error handling and many more. it can block request and modify request and response . next js support middleware in api route and also in page route. we can create middleware by creating a file named \_middleware.ts in the root directory of the application. after that we can export a function that take req, res and next as parameter. this function will run before every request and we can use it for handling authentication, authorization, logging, error handling and many more.
