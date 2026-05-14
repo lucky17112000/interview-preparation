@@ -393,3 +393,24 @@ app.use(
   })
 )
 ```
+
+#### 2. What are the characteristics of global error handlers?
+
+- A globall error handler is a special middlware with 4 parameter that centrally handle full application error.so that we don't need to handle error in every route and controller.
+- it is able to catch all unhandled error in the application and it is also able to send response to the client with proper status code and message.
+
+### 3.What are the uses of the Next function?
+
+- next fuction is a function it is used for pass the control to the next middleware in the stack. it is also used for handling error in express js application. when we call next function with an error then it will pass the control to the global error handler.
+
+#### 4.What are the advantages and disadvantages of using middleware?
+
+- middlaware is a mos powerful concept in backend development. it act like between request and response cycle
+- advantage:
+- code reusibility: after create middlare we can use it in mutiple route.
+- better code organization: it help us to organize our code in better way.
+- better error handling: it help us to handle error in better way.
+- improve security: it helps us implemant authentication and authorization , rate limiting, cors , helmet scuirty header and many more.
+- disadvantage:
+- perfomance issue: too many middlware can slow down the web application
+- middlawre order issue: if we use middlware in wrong order then it can lead to unexpected behavior.
