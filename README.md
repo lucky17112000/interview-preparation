@@ -414,3 +414,11 @@ app.use(
 - disadvantage:
 - perfomance issue: too many middlware can slow down the web application
 - middlawre order issue: if we use middlware in wrong order then it can lead to unexpected behavior.
+
+#### 5.What is the lifecycle of Express Middleware and how does it work?
+
+- the lifecycle of express middleware is as follows:
+- request recive:when a servr recive any request then it passed to first middlware inthe stack.
+- middlawre execution: middlware execute one by one in the order they are defined in the application by next() function.
+- actual route handler: after ececute all middlware then it execute actual routehandler.
+- response send: after execution all middlware and actual route handler successfully then send response to the client.
